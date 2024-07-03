@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>String Challenge</h2>
+    <h2 id="title">Hello World</h2>
+    <div id="result"></div> <!-- Placeholder for displaying results -->
+</body>
+<script>
+    var myStr = document.getElementById("title").innerHTML; // Retrieve the content of <h2 id="title">
+    console.log(myStr); // Outputs: Hello World
+
+    var allCaps = myStr.toUpperCase(); // Convert to uppercase
+    console.log(allCaps); // Outputs: HELLO WORLD
+
+    var replaceO = allCaps.replace("O", "Y"); // Replace 'O' with 'Y'
+    console.log(replaceO); // Outputs: HELLy WORLD
+
+    var reverseStr = replaceO.split("").reverse().join(""); // Reverse the string
+    console.log(reverseStr); // Outputs: DLROw YLLEH
+   
+    // Display the results in the HTML document
+    var resultElement = document.getElementById("result");
+    resultElement.innerHTML = `${allCaps} --- ${replaceO} --- ${reverseStr}`;
+</script>
+</html>
